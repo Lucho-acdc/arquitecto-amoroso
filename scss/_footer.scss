@@ -1,0 +1,23 @@
+/* Footer */
+
+.elfooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 40px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.iconos {
+    display: flex;
+}
+
+.icono {
+    color: #eeeeee;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Fin footer */

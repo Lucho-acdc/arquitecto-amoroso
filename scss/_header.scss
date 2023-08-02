@@ -1,0 +1,47 @@
+
+/* Header */
+
+header {
+    height: 32px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background-color: black;
+    color: #eeeeee;
+    padding-inline: 1rem;
+}
+
+.logo img {
+    background-color: #eeeeee;
+    height: 32px;
+    cursor:pointer;
+}
+
+.menu__principal {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__principal a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+.menu__principal a.enlinea {
+    background-color: #eeeeee;
+    border-radius: 10px 10px 0 0;
+    color: black;
+    height: 32px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.menu__principal a:hover {
+    text-decoration: underline;
+}
+
+/* Fin header */
