@@ -83,31 +83,34 @@
         .accordion-button {
             height: 100px;
         }
-        
-        .accordion-body.primero,
-        .accordion-body.segundo,
-        .accordion-body.tercero {
-            height: 50px;
-        }
 
+        .accordion-body {
+            position: relative;
+        }
         .primero {
             background-image: url(../imagenes/s1.JPG);
-            background-size: cover;
-            background-position: center;
-        
         }
-        
+    
         .segundo {
             background-image: url(../imagenes/s2.JPG);
+        }
+    
+        .tercero {
+            background-image: url(../imagenes/s3.JPG);
+        } 
+        
+        .primero,
+        .segundo,
+        .tercero {
+            height: 50px;
             background-size: cover;
             background-position: center;
         }
-        
-        .tercero {
-            background-image: url(../imagenes/s3.JPG);
-            background-size: cover;
-            background-position: center;
-        } 
+
+        .p__acordionservicio {
+            padding: 0.5rem;
+            text-align: center;
+        }
 
     }
 
@@ -208,6 +211,10 @@
 .contenedor__proyectos {
     border: #eeeeee solid 16px;
     display: grid;
+    
+    .carousel-caption__pantallaspequeñas {
+        display: none;
+    }
 }
 
 /* Fin proyectos */
@@ -570,6 +577,24 @@
 
     .contenedor__proyectos {
         margin-top: 20px;
+
+        .carousel-caption {
+            color: none;
+        }
+
+        .carousel-caption__pantallaspequeñas {
+            display: block;
+            background-color: black;
+            color: #fff;
+            padding: 1rem;
+
+            h5 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 0.75rem;
+            }
+        }
     }
 
 }
