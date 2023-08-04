@@ -166,13 +166,13 @@ header {
 }
 
 .contenedor__servicios__chico .accordion .segundo {
-  background-image: url(../imagenes/s2.JPG);
+  background-image: url(../imagenes/s2.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .contenedor__servicios__chico .accordion .tercero {
-  background-image: url(../imagenes/s3.JPG);
+  background-image: url(../imagenes/s3.jpg);
   background-size: cover;
   background-position: center;
 }
