@@ -2,46 +2,105 @@
 /* Header */
 
 header {
-    height: 32px;
+    height: 64px;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    background-color: black;
+    background-color: rgb(33, 37, 41);
     color: #eeeeee;
     padding-inline: 1rem;
-}
 
-.logo img {
-    background-color: #eeeeee;
-    height: 32px;
-    cursor:pointer;
-}
+    .logo img {
+        background-color: #eeeeee;
+        height: 64px;
+        cursor:pointer;
+    }
+    
+    .menu__principal {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 5px;
 
-.menu__principal {
-    display: flex;
-    justify-content: flex-end;
-}
+        a {
+            display: flex;
+            align-items: center;
+            color: #eeeeee96;
+            text-decoration: none;
+            margin-left: 16px;
+            position: relative;
+            transition: 0.5s;
 
-.menu__principal a {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    text-decoration: none;
-    margin-left: 16px;
-}
+            &:hover {
+                color: black;
+                transition: 0.5s;
+                z-index: 2;
 
-.menu__principal a.enlinea {
-    background-color: #eeeeee;
-    border-radius: 10px 10px 0 0;
-    color: black;
-    height: 32px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-}
+                &::before {
+                    transform: scaleY(1.5) scaleX(1.5);
+                    opacity: 1;
+                }
 
-.menu__principal a:hover {
-    text-decoration: underline;
+                &::after {
+                    transform: scaleY(1) scaleX(1.2);
+                    opacity: 1;
+                }
+            }
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-top: 1px solid #eeeeee;
+                border-bottom: 1px solid #eeeeee;
+                transform: scale(0.5) translateX(-50%);
+                opacity: 0;
+                transition: 0.5s;
+                z-index: -1;
+            }
+                     
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0.05rem;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #eeeeee;
+                transform: scale(0.5);
+                opacity: 0;
+                transition: 0.5s;
+                z-index: -1;
+            }
+        }
+
+        .enlinea {
+            color: #eeeeee;
+            display: flex;
+            align-items: center;
+            text-decoration: underline;
+        }
+
+        animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    }
+
+    @keyframes slide-in-blurred-top {
+    0% {
+        transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        transform-origin: 50% 0%;
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scaleY(1) scaleX(1);
+        transform-origin: 50% 50%;
+        filter: blur(0);
+        opacity: 1;
+    }
+    }
+
 }
 
 /* Fin header */
